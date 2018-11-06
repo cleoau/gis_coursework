@@ -7,6 +7,7 @@ output: pdf_document
 
 #Cartogram Map from QGIS
 !['Cartogram with no labels.'](Layout 2a.jpg)
+#Cartogram with labels
 !['Cartogram with labels selected by QGIS according to the magnification.'](Layout 1.png)
 !['Cartogram with all labels.'](Layout 2.jpg)
 
