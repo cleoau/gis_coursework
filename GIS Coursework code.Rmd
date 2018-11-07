@@ -5,14 +5,23 @@ date: "11/5/2018"
 output: pdf_document
 ---
 
+#As sources of information, Crampton (2001) argues that cartographic practices should be treated as social construct; where we should be critical of how position of powers creates a visual subjective representation of the real world. Utilising cartograms created by Hong Kong’s 2016 by-census commuting data, this report will critically discuss the generation and creation of maps; looking at Hong Kong government’s data source, the workflows on GUI and line-based programme to create maps, and cartographic practice of cartograms generated.
+
+
+
 #Cartogram Map from QGIS
-!['Cartogram with no labels.'](Layout 2a.jpg)
+!['Figure 1 - Cartogram with no labels.'](Layout 2a.jpg)
 #Cartogram with labels
-!['Cartogram with labels selected by QGIS according to the magnification.'](Layout 1.png)
-!['Cartogram with all labels.'](Layout 2.jpg)
+!['Figure 2 - Cartogram with labels selected by QGIS according to the magnification.'](Layout 1.png)
+!['Figure 3 - Cartogram with all labels.'](Layout 2.jpg)
+
+##Hexabin cartogram created by QGIS
+#aims not to distort the topography and create a balance comparison to the weight of the variables without the influence of topology. 
+
 
 #Cartogram from R
-!['Cartogram from R.'](Cartogram.png)
+!['Figure 4 - Cartogram from R.'](Cartogram.png)
+#Topology distorted cartogram created by R
 
 ```{r Loading csv data to RMarkdown}
 #Loading 'WorkingHK' csv Data to R
@@ -76,3 +85,5 @@ tmap_mode("view")
 HK_sp_cont_1 <- HK_sp_cont[ -c(1:2) ]
 tm_shape(HK_sp_cont_1) + tm_polygons("foot",style="jenks",palette="Blues",midpoint=NA, title="Cartogram of Hong Kong's \nworkers who commute by foot in 2016", alpha=0.75)
 ```
+
+#The provision of interactivity on R provides an easy comparison to actual topography of Hong Kong and would not be affected by the labelling of different districts. Oppose to the labels seen in Figure 1, where QGIS display the label according to the zoom; figure 2 where the cartographer “forcefully” show all labels. Figure 3 has no labels and topography lines, does not provide the narrative fully
